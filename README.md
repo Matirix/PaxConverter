@@ -9,6 +9,11 @@ the submission file based on the requirements listed [here](https://docs.google.
 To make this into an executable (Ensure you're in the proper directory after cloning)
 ```chmod +x paxconverter.sh```
 
+One can also make this available anywhere by placing this in the PATH directory.
+
+For Unix users (May need permissions):
+```mv paxconverter.sh /usr/local/bin```
+
 ### Running
 ```paxconverter.sh <folder_path> <pax_name> [mode]```
 
@@ -18,7 +23,7 @@ To make this into an executable (Ensure you're in the proper directory after clo
 | Parameter     | Description                                      |
 |--------------|--------------------------------------------------|
 | `folder_path` | Path to where the subdirectories are located.   |
-| `folder_name` | Name of the to-be-created pax file.             |
+| `pax_name` | Name of the to-be-created pax file.             |
 | `mode` (optional) | Specifies an operation mode (see options below). |
 
 ### Mode Options
@@ -33,13 +38,17 @@ uncompress it, print out the folder structure and the folder structure of each s
 
 ### Example
 This will make the required subdirectories in assn1
+
 ```paxconverter.sh user/projects/comp7003/assn1```
 
 This will return a pax.Z file
+
 ```paxconverter.sh user/projects/comp7003/assn1 comp7003-assign1-v1```
 
-This will create a folder called validation that will fully unpack the pax.Z file and print out the contents of each directory.
+This will create a folder called validation that will fully unpack the first pax.Z file and print out the contents of each directory.
+
 ```paxconverter.sh user/projects/comp7003/assn1 comp7003-assign1-v1 2```
 
 This will look for a pax.Z file and create a folder called validation that will fully unpack the pax.Z file and print out the contents of each directory.
+
 ```paxconverter.sh user/projects/comp7003/assn1 2```
