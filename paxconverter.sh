@@ -3,9 +3,9 @@
 # Check if the correct number of arguments is provided
 if [ "$#" -lt 2 ] || [ "$#" -gt 3 ]; then
     echo "Usage: $0 <folder_path> <pax_name or command> [mode]"
-    echo "Usage: folder_name - Compresses"
-    echo "Usage: '1' - Creates directories"
-    echo "Usage: '2' - Verifies correctness"
+    echo "MODE: <empty> - Creats a pax.Z file in the <folder_path> using p<ax_name>"
+    echo "MODE: '1' - Creates directories"
+    echo "MODE: '2' - Verifies correctness"
     exit 1
 fi
 
